@@ -25,7 +25,7 @@ var server = http.createServer(function(req, res){
         dramaList.push({title: qs.title, actor: qs.actor});
         // 302 Found 리다이렉트 상태 응답 코드: 
         // 클라이언트가 요청한 리소스가 Location 헤더에 주어진 URL로 일시적으로 이동되었음
-        //res.writeHead(302, {'Location': 'http://localhost:8080'});
+        res.writeHead(302, {'Location': 'http://localhost:8080'});
         res.end();
     }else{
         showDramaListUsingGet(res);  // 결과를 클라이언트로 전송
